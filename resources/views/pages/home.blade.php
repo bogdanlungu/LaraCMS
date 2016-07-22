@@ -1,11 +1,11 @@
 @extends('layouts.master')
 
 @section('content')
-    <h1>Main page</h1>
+    <h1>Homepage for all pages</h1>
 
-    <?php foreach ($users as $user): ?>
-      <li><?php echo $user; ?></li>
-    <?php endforeach; ?>
+    @foreach ($users as $user)
+      <li>{{ $user }} </li>
+    @endforeach
 
 @stop
 

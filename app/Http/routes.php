@@ -12,10 +12,15 @@
 */
 
 Route::get('/', function () {
-    return view('main');
+    $users = ['John', 'Andrew', 'Michael'];
+    return view('main', ['users' => $users]);
 });
 
 
 Route::get('test', function () {
-    return view('test');
+    $users = ['John', 'Andrew', 'Michael'];
+    return view('test')->with('users', $users);
 });
+
+
+Route::get('pages', 'PagesController@home');   

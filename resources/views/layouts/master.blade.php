@@ -3,7 +3,7 @@
     <head>
         <title>LaraCMS</title>
         <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" href="{{ URL::asset('css/styles.css') }}">
+        <link rel="stylesheet" href="{{ URL::asset('css/app.css') }}">
     </head>
     <body>
         <div class="container">

@@ -15,7 +15,7 @@
                 @yield('content')
             </div>
 
-            <div>
+            <div class="footer">
               @section('footer')
                This is the master footer.
               @show

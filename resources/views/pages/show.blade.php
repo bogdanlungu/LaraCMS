@@ -1,12 +1,10 @@
 @extends('layouts.master')
 
 @section('content')
-    <h1>Homepage for all pages</h1>
+    <h1>{{ $page->title }}</h1>
 
-    <ul class="pagelinks">
-      @foreach ($pages as $page)
-        <li>{{ $page->title }} </li>
-      @endforeach
+    <ul class="page-content">
+        <li>{{ $page->content }} </li>
     </ul>
 
 @stop

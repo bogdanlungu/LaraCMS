@@ -23,4 +23,5 @@ Route::get('test', function () {
 });
 
 
-Route::get('pages', 'PagesController@home');   
+Route::get('pages', 'PagesController@home');
+Route::get('pages/{page}', 'PagesController@show');

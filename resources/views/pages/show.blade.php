@@ -7,6 +7,15 @@
         <li>{{ $page->content }} </li>
     </ul>
 
+    <ul class="notes">
+    @foreach ($page->notes as $note)
+      <li>
+        <strong>Title:</strong> {{ $note->title }}
+        <br><strong>Body:</strong> {{ $note->body }}
+      </li>
+    @endforeach
+    </ul>
+
 @stop
 
 @section('footer')

@@ -25,3 +25,6 @@ Route::get('test', function () {
 
 Route::get('pages', 'PagesController@home');
 Route::get('pages/{page}', 'PagesController@show');
+
+// Add a note to a page
+Route::post('pages/{page}/notes', 'NotesController@store');

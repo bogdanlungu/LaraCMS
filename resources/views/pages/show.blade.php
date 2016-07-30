@@ -23,10 +23,12 @@
 
           <form method="POST" action="/pages/{{ $page->id }}/notes">
             <div class="form-group">
+              <label>Title</label>
               <input type="text" name="title" class="form-control">
             </div>
 
             <div class="form-group">
+              <label>Content</label>
               <textarea name="body" class="form-control"></textarea>
             </div>
 

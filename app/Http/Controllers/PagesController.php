@@ -29,4 +29,20 @@ class PagesController extends Controller
      return view('pages.show', compact('page'));
 
    }
+
+
+   public function store(Request $request)
+   {
+
+     $page = new Page;
+
+     $page->title = $request->title;
+     $page->content = $request->content;
+
+     $page->save();
+
+     return back();
+
+   }
+
 }

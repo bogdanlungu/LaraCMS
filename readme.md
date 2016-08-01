@@ -1,1 +1,1 @@
-# Content Management system built witi the Laravel PHP Framework
+# Content Management system built with the Laravel PHP Framework

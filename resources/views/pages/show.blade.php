@@ -15,6 +15,7 @@
             <li class="list-group-item">
               <strong>Title:</strong> {{ $note->title }}
               <br><strong>Body:</strong> {{ $note->body }}
+              <br><a href="/notes/{{ $note->id }}/edit"><button class="btn btn-success btn-xs" name="button">Edit note</button></a>
             </li>
           @endforeach
           </ul>

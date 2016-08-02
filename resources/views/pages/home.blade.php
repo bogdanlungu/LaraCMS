@@ -25,6 +25,7 @@
       </div>
 
       <div class="form-group">
+        <input type="hidden" name="user_id" value="1" />
         <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
         <button type="submit" class="btn btn-primary" name="button">Add page</button>
       </div>

@@ -38,7 +38,7 @@ class PagesController extends Controller
 
      $page->title = $request->title;
      $page->content = $request->content;
-     $page->user_id = $request->user_id;
+     $page->user_id = 1;
 
      $page->save();
 

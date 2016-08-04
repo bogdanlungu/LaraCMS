@@ -20,4 +20,10 @@ class Page extends Model
     {
         return $this->notes()->save($note);
     }
+
+    // The relantion with the user
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

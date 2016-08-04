@@ -21,9 +21,10 @@ class NotesController extends Controller
       $page->notes()->save($note);
       */
 
-      $page->addNote(
-        new Note($request->all())
-      );
+      $note = new Note($request->all());
+      $note->user_id = 1;
+
+      $page->addNote($note);
 
       return back();
 

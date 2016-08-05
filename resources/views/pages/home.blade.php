@@ -30,6 +30,8 @@
         <button type="submit" class="btn btn-primary" name="button">Add page</button>
       </div>
     </form>
+
+    {{ var_dump($errors) }}
   </div>
 </div>
 

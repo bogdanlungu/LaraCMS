@@ -16,12 +16,12 @@
     <form method="POST" action="/pages">
       <div class="form-group">
         <label>Page title</label>
-        <input type="text" name="title" class="form-control">
+        <input type="text" name="title" value="{{ old('title') }}" class="form-control">
       </div>
 
       <div class="form-group">
         <label>Content</label>
-        <textarea name="content" class="form-control"></textarea>
+        <textarea name="content" class="form-control">{{ old('content') }}</textarea>
       </div>
 
       <div class="form-group">
@@ -31,7 +31,13 @@
       </div>
     </form>
 
-    {{ var_dump($errors) }}
+    @if (count($errors))
+       <ul>
+         @foreach ($errors->all() as $error)
+           <li>{{ $error }}</li>
+         @endforeach
+       </ul>
+    @endif
   </div>
 </div>
 

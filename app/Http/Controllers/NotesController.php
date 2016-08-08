@@ -23,7 +23,7 @@ class NotesController extends Controller
 
       $this->validate($request, [
           'title' => 'required',
-          'body' => 'required',
+          'body' => 'required|min:5',
       ]);
 
       $note = new Note($request->all());

@@ -25,12 +25,12 @@
           <form method="POST" action="/pages/{{ $page->id }}/notes">
             <div class="form-group">
               <label>Title</label>
-              <input type="text" name="title" class="form-control">
+              <input type="text" name="title" value="{{ old('title') }}" class="form-control">
             </div>
 
             <div class="form-group">
               <label>Content</label>
-              <textarea name="body" class="form-control"></textarea>
+              <textarea name="body" class="form-control">{{ old('content') }}</textarea>
             </div>
 
             <div class="form-group">
@@ -38,6 +38,14 @@
               <button type="submit" class="btn btn-primary" name="button">Add note</button>
             </div>
           </form>
+
+          @if (count($errors))
+             <ul>
+               @foreach ($errors->all() as $error)
+                 <li>{{ $error }}</li>
+               @endforeach
+             </ul>
+          @endif
 
       </div>
     </div>

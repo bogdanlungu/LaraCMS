@@ -35,7 +35,7 @@ class PagesController extends Controller
     {
         $this->validate($request, [
             'title' => 'required',
-            'content' => 'required',
+            'content' => 'required|min:10',
         ]);
 
         $page = new Page;

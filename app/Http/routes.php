@@ -39,4 +39,12 @@ Route::patch('notes/{note}', 'NotesController@update');
 
 Route::auth();
 
-Route::get('/home', 'HomeController@index');
+// Admin area
+// Dashboard main page
+Route::get('/admin', 'AdminController@index');
+
+// Add pages
+Route::get('/admin/addPage', 'AdminController@addPage');
+
+// View pages
+Route::get('/admin/viewPages', 'AdminController@viewPages');

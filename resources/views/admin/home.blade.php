@@ -9,6 +9,7 @@
 
                 <div class="panel-body">
                     You are logged in!
+                    <br>Please select an action from the top menu.
                 </div>
             </div>
         </div>

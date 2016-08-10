@@ -23,6 +23,7 @@
                     <div class="form-group">
                       <label>Content</label>
                       <textarea name="content" class="form-control" rows="5">{{ old('content') }}</textarea>
+                      <div id="summernote"><p>Summernote content</p></div>
                     </div>
 
                     <div class="form-group">

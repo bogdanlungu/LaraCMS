@@ -7,7 +7,7 @@
         <h1>{{ $page->title }}</h1>
 
           <ul class="page-content">
-              <li>{{ $page->content }} </li>
+              <li>{!! $page->content !!} </li>
           </ul>
 
           <ul class="list-group">

@@ -2,7 +2,9 @@
 'use strict';
 
 $(document).ready(function () {
-    $('#summernote').summernote();
+  $('#summernote').summernote({
+    height: 300
+  });
 });
 
 },{}]},{},[1]);

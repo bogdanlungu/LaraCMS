@@ -11,26 +11,6 @@
       @endforeach
     </ul>
 
-    <h3>Add a new page</h3>
-
-    <form method="POST" action="/pages">
-      <div class="form-group">
-        <label>Page title</label>
-        <input type="text" name="title" value="{{ old('title') }}" class="form-control">
-      </div>
-
-      <div class="form-group">
-        <label>Content</label>
-        <textarea name="content" class="form-control">{{ old('content') }}</textarea>
-      </div>
-
-      <div class="form-group">
-
-        <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
-        <button type="submit" class="btn btn-primary" name="button">Add page</button>
-      </div>
-    </form>
-
     @if (count($errors))
        <ul>
          @foreach ($errors->all() as $error)

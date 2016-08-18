@@ -22,7 +22,7 @@
 
                     <div class="form-group">
                       <label>Content</label>
-                      <textarea name="content" id="summernote" class="form-control" rows="5">{{ old('content') }}</textarea>
+                      <textarea name="content" id="summernote" class="form-control" rows="10">{{ old('content') }}</textarea>
                     </div>
 
                     <div class="form-group">

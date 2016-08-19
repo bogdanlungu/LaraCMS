@@ -16,66 +16,53 @@ body {
     text-align: center;
     display: table-cell;
     vertical-align: top;
-
-    h1{
-      margin: 30px 0 30px 0;
-      font-size: 35px;
-      font-weight: bold;
+    h1 {
+        margin: 30px 0;
+        font-size: 35px;
+        font-weight: bold;
     }
-
     .content {
         text-align: center;
         display: inline-block;
     }
-
     .title {
         margin: 30px 0 0;
         font-size: 96px;
     }
-
     .description {
         font-size: 30px;
     }
-
-    .navigation{
-      margin: 30px 0 0 0;
-
-      a{
-        color: #000;
-        text-decoration: none;
-        font-weight: bold;
-
-        &:hover{
-          text-decoration: underline;
+    .navigation {
+        margin: 30px 0 0;
+        a {
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            &:hover {
+                text-decoration: underline;
+            }
         }
-      }
     }
-
     a {
         margin: 10px;
         font-size: 18px;
     }
-
-    .pagelinks{
-      display: inline-block;
-      margin: 20px 0 0 0;
-
-      li{
-        margin: 10px 0 0 0;
-        font-size: 18px;
-      }
+    .pagelinks {
+        display: inline-block;
+        margin: 20px 0 0;
+        li {
+            margin: 10px 0 0;
+            font-size: 18px;
+        }
     }
-
-    .page-content{
-      display: inline-block;
-      margin: 20px 0 0 0;
+    .page-content {
+        display: inline-block;
+        margin: 20px 0 0;
     }
-
-    .notes{
-      margin-top: 20px;
+    .notes {
+        margin-top: 20px;
     }
-
-    .footer{
-      margin: 20px 0 0 0;
+    .footer {
+        margin: 20px 0 0;
     }
 }

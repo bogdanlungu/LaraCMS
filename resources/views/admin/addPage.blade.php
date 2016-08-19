@@ -14,7 +14,7 @@
                 <div class="panel-body">
                   <h3>Add a new page</h3>
 
-                  <form method="POST" action="/pages">
+                  <form method="POST" action="/pages" enctype="multipart/form-data">
                     <div class="form-group">
                       <label>Page title</label>
                       <input type="text" name="title" value="{{ old('title') }}" class="form-control">
@@ -22,7 +22,12 @@
 
                     <div class="form-group">
                       <label>Content</label>
-                      <textarea name="content" id="summernote" class="form-control" rows="10">{{ old('content') }}</textarea>
+                      <textarea name="content" id="summernote" class="form-control">{{ old('content') }}</textarea>
+                    </div>
+
+                    <div class="form-group">
+                      <label>Upload file</label>
+                      <input type="file" name="file">
                     </div>
 
                     <div class="form-group">

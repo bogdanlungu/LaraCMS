@@ -1,10 +1,6 @@
-#summernote{
-  height: 400px;
-}
-
-.pagelinks li{
-  font-size: 20px;
-  margin-bottom: 20px;
-  font-weight: 600;
-  list-style: none;
+.pagelinks li {
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    list-style: none;
 }

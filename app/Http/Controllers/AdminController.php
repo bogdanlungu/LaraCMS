@@ -40,6 +40,7 @@ class AdminController extends Controller
             $this->validate($request, [
                 'title' => 'required',
                 'content' => 'required|min:10',
+                'file' => 'required|file'
             ]);
 
             $page = new Page;

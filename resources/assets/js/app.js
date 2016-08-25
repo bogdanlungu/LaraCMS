@@ -1,5 +1,2 @@
-$(document).ready(function() {
-    $('#summernote').summernote({
-      height: 200
-    });
-});
+import './modules/confirm.js';
+import './modules/summernote.js';

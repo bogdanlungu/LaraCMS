@@ -33,5 +33,9 @@
               @show
             </div>
         </div>
+
+        <!-- include internal JS-->
+        <script src="{{ URL::asset('js/app.js') }}"></script>
+
     </body>
 </html>

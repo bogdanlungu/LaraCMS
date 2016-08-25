@@ -18,7 +18,7 @@ body {
   display: table-cell;
   vertical-align: top; }
   .container h1 {
-    margin: 30px 0 30px 0;
+    margin: 30px 0;
     font-size: 35px;
     font-weight: bold; }
   .container .content {
@@ -30,7 +30,7 @@ body {
   .container .description {
     font-size: 30px; }
   .container .navigation {
-    margin: 30px 0 0 0; }
+    margin: 30px 0 0; }
     .container .navigation a {
       color: #000;
       text-decoration: none;
@@ -42,16 +42,16 @@ body {
     font-size: 18px; }
   .container .pagelinks {
     display: inline-block;
-    margin: 20px 0 0 0; }
+    margin: 20px 0 0; }
     .container .pagelinks li {
-      margin: 10px 0 0 0;
+      margin: 10px 0 0;
       font-size: 18px; }
   .container .page-content {
     display: inline-block;
-    margin: 20px 0 0 0; }
+    margin: 20px 0 0; }
   .container .notes {
     margin-top: 20px; }
   .container .footer {
-    margin: 20px 0 0 0; }
+    margin: 20px 0 0; }
 
 /*# sourceMappingURL=app.css.map */

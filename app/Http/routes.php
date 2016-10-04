@@ -48,3 +48,6 @@ Route::get('/admin/addPage', 'AdminController@addPage');
 
 // View pages
 Route::get('/admin/viewPages', 'AdminController@viewPages');
+
+// Delete page
+Route::get('/admin/deletePage/{page}', 'AdminController@deletePage');

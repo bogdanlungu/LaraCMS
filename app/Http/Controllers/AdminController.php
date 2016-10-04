@@ -72,4 +72,14 @@ class AdminController extends Controller
         $pages = Page::all();
         return view('admin.viewPages')->with('pages', $pages);
     }
+
+
+    /**
+     * Delete a page
+     */
+    public function deletePage($page){
+      $page = Page::find($page);
+      $page->delete();
+      return view('admin.deleteConfirm')->with('page', $page);
+    }
 }

@@ -9,7 +9,8 @@ let confirmModule = {
 
             let res = confirm("Are you sure you want to delete the page: " + pageTitle);
             if (res) {
-                console.log("The user confirmed!");
+                var deleteUrl = '/admin/deletePage/' + pageId;
+                window.location.replace(deleteUrl);
             } else {
                 console.log("The user aborted");
             }

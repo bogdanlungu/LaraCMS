@@ -20,7 +20,6 @@ var confirmModule = {
             var res = confirm("Are you sure you want to delete the page: " + pageTitle);
             if (res) {
                 var deleteUrl = '/admin/deletePage/' + pageId;
-                console.log(deleteUrl);
                 window.location.replace(deleteUrl);
             } else {
                 console.log("The user aborted");

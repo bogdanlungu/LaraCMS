@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
 use App\Page;
 use App\Http\Requests;
 use Illuminate\Http\Request;
@@ -30,13 +31,11 @@ class AdminController extends Controller
 
 
     /**
-     * Form to add pages
+     * Form to add pages and save the page
      */
     public function addPage(Request $request)
     {
-
         if ($request->isMethod('post')) {
-
             $this->validate($request, [
                 'title' => 'required',
                 'content' => 'required|min:10',
@@ -47,19 +46,25 @@ class AdminController extends Controller
 
             $page->title = $request->title;
             $page->content = $request->content;
-            $page->user_id = auth()->user()->name;
+            $page->user_id = Auth::user()->id;
 
-            $page->save();
+            if ($request->hasFile('file')) {
 
-            $success = "The page is saved";
+                $page->save();
 
-            return view('admin.addPage')->with('success', $success);
+                /* rename the file and move it to /upload */
+                $fileName = $page->id . "." .  $request->file('file')->getClientOriginalExtension();
+                $request->file('file')->move(base_path() . '/public/upload/', $fileName);
 
-        }else{
-
+                $success = "The page was saved";
+                return view('admin.addPage')->with('success', $success);
+            } else {
+                $success = "There was an error.";
+                return view('admin.addPage')->with('success', $success);
+            }
+        } else {
             $success = 0;
             return view('admin.addPage')->with('success', $success);
-
         }
     }
 
@@ -77,9 +82,10 @@ class AdminController extends Controller
     /**
      * Delete a page
      */
-    public function deletePage($page){
-      $page = Page::find($page);
-      $page->delete();
-      return view('admin.deleteConfirm')->with('page', $page);
+    public function deletePage($page)
+    {
+        $page = Page::find($page);
+        $page->delete();
+        return view('admin.deleteConfirm')->with('page', $page);
     }
 }

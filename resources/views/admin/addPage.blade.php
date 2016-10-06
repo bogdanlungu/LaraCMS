@@ -8,13 +8,13 @@
                 <div class="panel-heading">Add page</div>
 
                 @if ($success)
-                  <h4>{{ $success }}</h4>
+                  <h4>The page was saved.</h4>
                 @endif
 
                 <div class="panel-body">
                   <h3>Add a new page</h3>
 
-                  <form method="POST" action="/pages" enctype="multipart/form-data">
+                  <form method="POST" action="/admin/addPage" enctype="multipart/form-data">
                     <div class="form-group">
                       <label>Page title</label>
                       <input type="text" name="title" value="{{ old('title') }}" class="form-control">

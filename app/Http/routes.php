@@ -44,7 +44,9 @@ Route::auth();
 Route::get('/admin', 'AdminController@index');
 
 // Add pages
-Route::get('/admin/addPage', 'AdminController@addPage');
+// Route::get('/admin/addPage', 'AdminController@addPage');
+
+Route::match(['get', 'post'], '/admin/addPage', 'AdminController@addPage');
 
 // View pages
 Route::get('/admin/viewPages', 'AdminController@viewPages');

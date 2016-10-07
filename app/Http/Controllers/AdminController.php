@@ -31,7 +31,7 @@ class AdminController extends Controller
 
 
     /**
-     * Form to add pages and save the page
+     * Form to add pages and upload files
      */
     public function addPage(Request $request)
     {
@@ -80,12 +80,19 @@ class AdminController extends Controller
 
 
     /**
-     * Delete a page
+     * Delete a page and an uploaded file
      */
     public function deletePage($page)
     {
         $page = Page::find($page);
+        $fileName = $page->id . "." ."txt";
+        $fileName = base_path() . '/public/upload/' . $fileName;
         $page->delete();
+
+        if(file_exists($fileName)){
+            unlink($fileName);
+        }
+
         return view('admin.deleteConfirm')->with('page', $page);
     }
 }

@@ -52,9 +52,22 @@ class AdminController extends Controller
 
                 $page->save();
 
-                /* rename the file and move it to /upload */
                 $fileName = $page->id . "." .  $request->file('file')->getClientOriginalExtension();
-                $request->file('file')->move(base_path() . '/public/upload/', $fileName);
+
+                /* Move the file in a temporary location */
+                $request->file('file')->move(base_path() . '/public/temp/', $fileName);
+                $theFile = base_path() . '/public/temp/' . $fileName;
+
+                /* Check if the file is image */
+                $allowedMimeTypes = ['image/jpeg','image/gif','image/png','image/bmp','image/svg+xml'];
+                $contentType = mime_content_type($theFile);
+
+                /* Upload the file to the right location */
+                if( in_array($contentType, $allowedMimeTypes) ){
+                    $request->file('file')->move(base_path() . '/public/images/', $fileName);
+                }else{
+                    $request->file('file')->move(base_path() . '/public/upload/', $fileName);
+                }
 
                 $success = "The page was saved";
                 return view('admin.addPage')->with('success', $success);
